@@ -1,0 +1,28 @@
+[project]
+name = "unn-2026-mityaeva"
+version = "0.1.0"
+description = "Telegram echo bot"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.0,<2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0,<10.0",
+    "ruff>=0.17,<0.18",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["bot*"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
