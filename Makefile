@@ -20,7 +20,7 @@ lint-fix:
 typecheck:
 	$(PYTHON) -m mypy bot
 
-check: format-check lint test
+check: format-check lint typecheck test
 
 docker-build:
 	docker build -t unn-2026-mityaeva .
